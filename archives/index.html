@@ -171,7 +171,7 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="/631649490@qq.com" title="Email"></a>
+                                <a class="fa Email" href="mailto:&#54;&#51;&#49;&#54;&#52;&#57;&#52;&#57;&#48;&#64;&#113;&#113;&#46;&#99;&#111;&#109;" title="Email"></a>
                             
                                 <a class="fa GitHub" href="https://github.com/lighting233" title="GitHub"></a>
                             
@@ -249,7 +249,7 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="/631649490@qq.com" title="Email"></a>
+                                <a class="fa Email" target="_blank" href="mailto:&#54;&#51;&#49;&#54;&#52;&#57;&#52;&#57;&#48;&#64;&#113;&#113;&#46;&#99;&#111;&#109;" title="Email"></a>
                             
                                 <a class="fa GitHub" target="_blank" href="https://github.com/lighting233" title="GitHub"></a>
                             
@@ -273,6 +273,35 @@
           <a href="/archives/2016" class="archive-year">2016</a>
         </div>
         <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2016/10/16/test2/" class="archive-article-date">
+      <time datetime="2016-10-16T10:08:49.046Z" itemprop="datePublished">10-16</time>
+</a>
+
+
+        </div>
+         
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/10/16/test2/">test2</a>
+    </h1>
+  
+
+        <div class="article-info info-on-archive">
+          
+
+          
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
     
     <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
@@ -390,7 +419,7 @@
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 5;
+                var backgroundnum = 6;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
@@ -427,6 +456,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

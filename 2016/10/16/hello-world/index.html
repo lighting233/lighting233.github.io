@@ -172,7 +172,7 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="/631649490@qq.com" title="Email"></a>
+                                <a class="fa Email" href="mailto:&#54;&#51;&#49;&#54;&#52;&#57;&#52;&#57;&#48;&#64;&#113;&#113;&#46;&#99;&#111;&#109;" title="Email"></a>
                             
                                 <a class="fa GitHub" href="https://github.com/lighting233" title="GitHub"></a>
                             
@@ -250,7 +250,7 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="/631649490@qq.com" title="Email"></a>
+                                <a class="fa Email" target="_blank" href="mailto:&#54;&#51;&#49;&#54;&#52;&#57;&#52;&#57;&#48;&#64;&#113;&#113;&#46;&#99;&#111;&#109;" title="Email"></a>
                             
                                 <a class="fa GitHub" target="_blank" href="https://github.com/lighting233" title="GitHub"></a>
                             
@@ -425,7 +425,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/test-world/">Test World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/test2/">test2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/test-world/">Test World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/hello-world/">Hello World</a></li></ul>
 
 
 
@@ -479,7 +479,7 @@
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 5;
+                var backgroundnum = 6;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
@@ -516,6 +516,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

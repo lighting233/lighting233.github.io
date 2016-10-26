@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="npm基本用法">
+<meta name="description" content="正则基本用法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm与bower">
-<meta property="og:url" content="http://yoursite.com/2016/10/17/test2/index.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2016/10/26/正则表达式/index.html">
 <meta property="og:site_name" content="雷庭的博客">
-<meta property="og:description" content="npm基本用法">
-<meta property="og:updated_time" content="2016-10-17T14:18:28.066Z">
+<meta property="og:description" content="正则基本用法">
+<meta property="og:updated_time" content="2016-10-26T04:43:14.106Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="npm与bower">
-<meta name="twitter:description" content="npm基本用法">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="正则基本用法">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>npm与bower | 雷庭的博客</title>
+<title>正则表达式 | 雷庭的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -262,11 +262,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-test2" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/17/test2/" class="article-date">
-      <time datetime="2016-10-17T14:18:28.062Z" itemprop="datePublished">2016-10-17</time>
+      <a href="/2016/10/26/正则表达式/" class="article-date">
+      <time datetime="2016-10-26T01:50:31.000Z" itemprop="datePublished">2016-10-26</time>
 </a>
 
 
@@ -281,7 +281,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      npm与bower
+      正则表达式
     </h1>
   
 
@@ -296,7 +296,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/语法/">语法</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -306,33 +306,63 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
-<h1 id="NPM"><a href="#NPM" class="headerlink" title=" NPM"></a> NPM</h1><ul>
-<li>node package manager(node的包管理工具)</li>
-<li>npm管理包非常方便，我们只需要记住使用哪个包就可以了</li>
-<li><p>使用</p>
+        <ul>
+<li>g:global全文搜索，不添加，走左到第一个匹配停止</li>
+<li>i:ignore case忽略大小写，默认大小写敏感</li>
+<li>m:multiple lines 多行搜索</li>
+</ul>
+<h3 id="正则表达式有两种基本字符类型组成"><a href="#正则表达式有两种基本字符类型组成" class="headerlink" title="正则表达式有两种基本字符类型组成"></a>正则表达式有两种基本字符类型组成</h3><h4 id="1-原义文本字符"><a href="#1-原义文本字符" class="headerlink" title="1. 原义文本字符"></a>1. 原义文本字符</h4><h4 id="2-元字符"><a href="#2-元字符" class="headerlink" title="2. 元字符"></a>2. 元字符</h4><ul>
+<li>\t:水平制表符；</li>
+<li>\v:垂直制表符；</li>
+<li>\n:换行符；</li>
+<li>\r:回车符；</li>
+<li>\0:空字符；</li>
+<li>\f:换页符；</li>
+<li>\cX:与X对应的控制字符</li>
+<li>元字符在正则表达式中有特殊意义的非字母字符： *+?$^.(){}[]</li>
+</ul>
+<h3 id="范围类："><a href="#范围类：" class="headerlink" title="范围类："></a>范围类：</h3><ul>
+<li>[0-9]表示0到9的值</li>
+<li>[a-z]表示小写字母a到z</li>
+<li>[a-zA-Z]表示小写和大写字母a到z</li>
+<li>注意：a-z中间的-并不是代表字符哦 而是范围 </li>
+<li>如果要包括字符-的话，则加在后面，如[a-z-]</li>
+</ul>
+<h4 id="字符类取反"><a href="#字符类取反" class="headerlink" title="字符类取反 ^"></a>字符类取反 ^</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;a1b2c3d4&apos;.replace(/[^abc]/g,&apos;x&apos;)</div><div class="line">&apos;axbxcxxx&apos;</div></pre></td></tr></table></figure>
 <ul>
-<li>npm install xxx</li>
-<li>安装一个包到项目本地，必须要联网</li>
-<li>安装完成过后项目根目录下会多一个node_modules文件夹，所有的下载下来的包全部在里面</li>
-<li>由于需要记录项目依赖哪些东西，所以需要一个配置文件“package.json”，可以通过npm init命令生成</li>
-<li>以后安装包的时候将其–save</li>
-<li>–save就是将我们安装的包名字和包版本记录到配置文件中的dependencies节点中</li>
-<li>–save-dev</li>
-<li>项目依赖分两种，一个就是普通的项目依赖比如bootstrap，还用一种只是开发阶段需要用的，这种属于开发依赖比如gulp，开发依赖最终记录在devDependencies节点里面<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- npm uninstall xxx --save</div><div class="line">- npm install xxx -g(全局安装包)</div></pre></td></tr></table></figure>
-</li>
+<li>\D 等价于 [^0-9] 非数字字符</li>
+<li>\s 等价于 [\t\n\x0B\f\r] 空白符 s:space</li>
+<li>\S 等价于 [^\t\n\x0B\f\r] 非空白符</li>
+<li>\w 等价于 [a-zA-Z_0-9] 单词字符（字母、数字下划线） w:word</li>
+<li>\W 等价于 [^a-zA-Z_0-9] 非单词字符</li>
+<li>提示：大写的表示取反</li>
+<li>\b 单词边界</li>
+<li>\B非单词边界</li>
 </ul>
-<ul>
-<li>如果你安装的是一个工具，工具要在每一个地方都能用，这种情况下一般全局安装。</li>
+<h4 id="贪婪模式（默认）"><a href="#贪婪模式（默认）" class="headerlink" title="贪婪模式（默认）"></a>贪婪模式（默认）</h4><p>  \d{3,6}   1234568<br>  正则表达式在匹配时，尽可能多的匹配，直到匹配失败<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;1234568&apos;.replace(/\d&#123;3,6&#125;/g,&apos;Q&apos;);</div><div class="line">&quot;Q8&quot;</div><div class="line">&apos;1234568&apos;.replace(/\d&#123;3,6&#125;/,&apos;Q&apos;);</div><div class="line">&quot;Q8&quot;</div></pre></td></tr></table></figure></p>
+<h4 id="非贪婪模式"><a href="#非贪婪模式" class="headerlink" title="非贪婪模式"></a>非贪婪模式</h4><p>  正则表达式尽可能少的匹配，即一旦成功匹配就不再继续匹配<br>  做法：在量词后加上 ？ 即可<br>  例子：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;123456789&apos;.match(/\d&#123;3,5&#125;?/g)</div><div class="line">      [&quot;123&quot;, &quot;456&quot;, &quot;789&quot;]</div></pre></td></tr></table></figure></p>
+<h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><p>匹配字符串 Byron 连续出现 3 此的场景</p>
+<h4 id="1-使用（）可以达到分组的功能，使量词作用于分组-（Byron）-3-，如果直接Byron-3-则匹配到的三Byronnn"><a href="#1-使用（）可以达到分组的功能，使量词作用于分组-（Byron）-3-，如果直接Byron-3-则匹配到的三Byronnn" class="headerlink" title="1. 使用（）可以达到分组的功能，使量词作用于分组 （Byron）{3}，如果直接Byron{3}则匹配到的三Byronnn"></a>1. 使用（）可以达到分组的功能，使量词作用于分组 （Byron）{3}，如果直接Byron{3}则匹配到的三Byronnn</h4><p>例子：小写字母连续出现3次<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;a1b2c3d4&apos;.replace(/[a-z]\d&#123;3&#125;/g,&apos;Q&apos;);</div><div class="line">&quot;a1b2c3d4&quot;</div><div class="line">&apos;a1b2c3d4&apos;.replace(/([a-z]\d)&#123;3&#125;/g,&apos;Q&apos;);</div><div class="line">&quot;Qd4&quot;</div></pre></td></tr></table></figure></p>
+<h4 id="2-使用-将正则表达式分成前后两部分，可以达到-或-的效果"><a href="#2-使用-将正则表达式分成前后两部分，可以达到-或-的效果" class="headerlink" title="2. 使用 将正则表达式分成前后两部分，可以达到 或 的效果"></a>2. 使用 将正则表达式分成前后两部分，可以达到 或 的效果</h4><p>isIS ByronCasper Byr(on|Ca)sper<br>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;ByronCasper&apos;.replace(/ByronCasper/g,&apos;Q&apos;);</div><div class="line">&quot;QQ&quot;</div><div class="line">&apos;ByrCasperByronsper&apos;.replace(/Byr(on|Ca)sper/g,&apos;Q&apos;);</div><div class="line">&quot;QQ&quot;</div></pre></td></tr></table></figure></p>
+<h4 id="3-反向引用"><a href="#3-反向引用" class="headerlink" title="3. 反向引用"></a>3. 反向引用</h4><p>2015-12-25 =&gt; 12/25/2015<br>在分组的基础上，分组取值使用’$1 $2….’代表捕获分组内容<br>实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;2015-09-09&apos;.replace(/(\d&#123;4&#125;)-(\d&#123;2&#125;)-(\d&#123;2&#125;)/g,&apos;$2/$3/$1&apos;);</div><div class="line">&quot;09/09/2015&quot;</div></pre></td></tr></table></figure></p>
+<h4 id="4-忽略分组"><a href="#4-忽略分组" class="headerlink" title="4. 忽略分组"></a>4. 忽略分组</h4><p>不希望捕获某些分组，只需要在分组内加上 ？：即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（？：Byron）.（ok）</div><div class="line">&apos;2015-07-09&apos;.replace(/(?:\d&#123;4&#125;)-(\d&#123;2&#125;)-(\d&#123;2&#125;)/g,&apos;$2/$3/$1&apos;);</div><div class="line">&quot;09/$3/07&quot;</div></pre></td></tr></table></figure></p>
+<h3 id="前瞻"><a href="#前瞻" class="headerlink" title="前瞻"></a>前瞻</h3><ul>
+<li>正则表达式从文本头部向尾部开始解析，文本尾部方向，成为“前”</li>
+<li>前瞻 就是在正则表达式匹配到规则的时候，向前检查是否符合断言。比如找到儿子为张三，还得看看他的父亲是否是李四</li>
+<li>后顾/后瞻方向相反</li>
+<li>注意：JavaScript不支持后顾</li>
+<li>符合特定断言称为 肯定/正向 匹配</li>
+<li>不符合特定断言称为 否定/负向 匹配</li>
+<li>正向前瞻 exp（？=assert） 先判断是否符合正则，再符合正则的基础上判断是否符合断言</li>
+<li>负向前瞻 exp（？！asseret）</li>
 </ul>
-</li>
-</ul>
-<h1 id="Bower"><a href="#Bower" class="headerlink" title="Bower"></a>Bower</h1><ul>
-<li>Web sites are made of lots of things ― frameworks, libraries, assets, and utilities. Bower manages all these things for you.</li>
-<li>Bower就是用来管理项目中所有的依赖，主要用于Web页面开发时使用的包管理，比如jquery，bootstrap<blockquote>
-<p>重复的轮子太多，抓住轮子与轮子之间的共性</p>
-</blockquote>
-</li>
+<p>例如：<br>  \w(?=\d)  正向前瞻 符合断言 匹配单词字符，要求首先是一个单词，并且这个单词符合断言，后跟一个数字<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;a2*3&apos;.replace(/\w(?=\d)/g,&apos;A&apos;)   &quot;A2*3&quot;</div><div class="line">&apos;a2*3bb&apos;.replace(/\w(?!\d)/g,&apos;A&apos;)   &quot;aA*AAA&quot;</div></pre></td></tr></table></figure></p>
+<h4 id="对象属性"><a href="#对象属性" class="headerlink" title="对象属性"></a>对象属性</h4><ul>
+<li>global：是否全文搜索，默认false</li>
+<li>ignore case：是否大小写敏感，默认是false</li>
+<li>multiline：多行搜索，默认值是false</li>
+<li>lastIndex：是当前表达式匹配内容的最后一个字符的下一个位置</li>
+<li>source：正则表达式的文本字符串</li>
 </ul>
 
       
@@ -342,13 +372,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/10/17/test2/">npm与bower</a></p>
+        <p><span>本文标题:</span><a href="/2016/10/26/正则表达式/">正则表达式</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Lighting</a></p>
-        <p><span>发布时间:</span>2016-10-17, 22:18:28</p>
-        <p><span>最后更新:</span>2016-10-17, 22:18:28</p>
+        <p><span>发布时间:</span>2016-10-26, 09:50:31</p>
+        <p><span>最后更新:</span>2016-10-26, 12:43:14</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/10/17/test2/" title="npm与bower">http://yoursite.com/2016/10/17/test2/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/17/test2/　　作者: Lighting" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/26/正则表达式/" title="正则表达式">http://yoursite.com/2016/10/26/正则表达式/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/26/正则表达式/　　作者: Lighting" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -360,16 +390,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/10/26/正则表达式/">
-                    正则表达式
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/10/17/test-world/">
-                    gulp
+                <a href="/2016/10/17/test2/">
+                    npm与bower
                 </a>
             </div>
         
@@ -381,7 +405,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#NPM"><span class="toc-number">1.</span> <span class="toc-text"> NPM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Bower"><span class="toc-number">2.</span> <span class="toc-text">Bower</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式有两种基本字符类型组成"><span class="toc-number">1.</span> <span class="toc-text">正则表达式有两种基本字符类型组成</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-原义文本字符"><span class="toc-number">1.1.</span> <span class="toc-text">1. 原义文本字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-元字符"><span class="toc-number">1.2.</span> <span class="toc-text">2. 元字符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#范围类："><span class="toc-number">2.</span> <span class="toc-text">范围类：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符类取反"><span class="toc-number">2.1.</span> <span class="toc-text">字符类取反 ^</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#贪婪模式（默认）"><span class="toc-number">2.2.</span> <span class="toc-text">贪婪模式（默认）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#非贪婪模式"><span class="toc-number">2.3.</span> <span class="toc-text">非贪婪模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分组"><span class="toc-number">3.</span> <span class="toc-text">分组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-使用（）可以达到分组的功能，使量词作用于分组-（Byron）-3-，如果直接Byron-3-则匹配到的三Byronnn"><span class="toc-number">3.1.</span> <span class="toc-text">1. 使用（）可以达到分组的功能，使量词作用于分组 （Byron）{3}，如果直接Byron{3}则匹配到的三Byronnn</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-使用-将正则表达式分成前后两部分，可以达到-或-的效果"><span class="toc-number">3.2.</span> <span class="toc-text">2. 使用 将正则表达式分成前后两部分，可以达到 或 的效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-反向引用"><span class="toc-number">3.3.</span> <span class="toc-text">3. 反向引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-忽略分组"><span class="toc-number">3.4.</span> <span class="toc-text">4. 忽略分组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前瞻"><span class="toc-number">4.</span> <span class="toc-text">前瞻</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#对象属性"><span class="toc-number">4.1.</span> <span class="toc-text">对象属性</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -417,7 +441,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"npm与bower　| 雷庭的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"正则表达式　| 雷庭的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -437,15 +461,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/10/26/正则表达式/" title="上一篇: 正则表达式">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/10/17/test-world/" title="下一篇: gulp">
+            <a href="/2016/10/17/test2/" title="下一篇: npm与bower">
                 <i class="fa fa-angle-right"></i>
             </a>
         

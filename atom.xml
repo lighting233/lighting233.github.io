@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-26T07:34:57.945Z</updated>
+  <updated>2016-10-26T13:06:25.295Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人项目展示</title>
+    <link href="http://yoursite.com/2016/10/26/project/"/>
+    <id>http://yoursite.com/2016/10/26/project/</id>
+    <published>2016-10-26T12:50:51.000Z</published>
+    <updated>2016-10-26T13:06:25.295Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="正则表达式有两种基本字符类型组成"><a href="#正则表达式有两种基本字符类型组成" class="headerlink" title="正则表达式有两种基本字符类型组成"></a>正则表达式有两种基本字符类型组成</h3><h4 id="1-原义文本字符"><a href="#1-原义文本字符" class="headerlink" title="1. 原义文本字符"></a>1. 原义文本字符</h4><h4 id="2-元字符"><a href="#2-元字符" class="headerlink" title="2. 元字符"></a>2. 元字符</h4><ul>
+<li>\t:水平制表符；</li>
+<li>\v:垂直制表符；</li>
+<li>\n:换行符；</li>
+<li>\r:回车符；</li>
+<li>\0:空字符；</li>
+<li>\f:换页符；</li>
+<li>\cX:与X对应的控制字符</li>
+<li>元字符在正则表达式中有特殊意义的非字母字符： *+?$^.(){}[]</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      项目简介
+    
+    </summary>
+    
+      <category term="作品展示" scheme="http://yoursite.com/categories/%E4%BD%9C%E5%93%81%E5%B1%95%E7%A4%BA/"/>
+    
+    
+      <category term="项目" scheme="http://yoursite.com/tags/%E9%A1%B9%E7%9B%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>正则表达式</title>

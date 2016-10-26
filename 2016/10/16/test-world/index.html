@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="正则基本用法">
+<meta name="description" content="gulp基本用法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="正则表达式">
-<meta property="og:url" content="http://yoursite.com/2016/10/26/正则表达式/index.html">
+<meta property="og:title" content="gulp">
+<meta property="og:url" content="http://yoursite.com/2016/10/16/test-world/index.html">
 <meta property="og:site_name" content="雷庭的博客">
-<meta property="og:description" content="正则基本用法">
-<meta property="og:updated_time" content="2016-10-26T07:34:57.945Z">
+<meta property="og:description" content="gulp基本用法">
+<meta property="og:updated_time" content="2016-10-26T12:56:44.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="正则表达式">
-<meta name="twitter:description" content="正则基本用法">
+<meta name="twitter:title" content="gulp">
+<meta name="twitter:description" content="gulp基本用法">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>正则表达式 | 雷庭的博客</title>
+<title>gulp | 雷庭的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -276,11 +276,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-test-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/26/正则表达式/" class="article-date">
-      <time datetime="2016-10-26T01:50:31.000Z" itemprop="datePublished">2016-10-26</time>
+      <a href="/2016/10/16/test-world/" class="article-date">
+      <time datetime="2016-10-16T12:50:51.000Z" itemprop="datePublished">2016-10-16</time>
 </a>
 
 
@@ -295,7 +295,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      正则表达式
+      gulp
     </h1>
   
 
@@ -310,7 +310,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/语法/">语法</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -320,63 +320,109 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <ul>
-<li>g:global全文搜索，不添加，走左到第一个匹配停止</li>
-<li>i:ignore case忽略大小写，默认大小写敏感</li>
-<li>m:multiple lines 多行搜索</li>
+        <a id="more"></a>
+<h1 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h1><h2 id="当下的前端开发"><a href="#当下的前端开发" class="headerlink" title="当下的前端开发"></a>当下的前端开发</h2><ul>
+<li>不再是简简单单的使用HTML+CSS+JavaScript这些简单的技术构建网页应用程序了</li>
+<li>我们要提高效率，就必须减少重复的工作</li>
+<li>使用less之类预处理的CSS coffeescript</li>
+<li>提供开发阶段的便利，开发阶段更快捷</li>
+<li>现在的开发行业优质的开发人员是不应该将精力放在这些重复性质的工作上</li>
+<li>Gulp就是一种可以自动化完成我们开发过程中大量的重复工作<ul>
+<li>预处理语言的编译</li>
+<li>js css html 压缩混淆</li>
+<li>图片体积优化</li>
 </ul>
-<h3 id="正则表达式有两种基本字符类型组成"><a href="#正则表达式有两种基本字符类型组成" class="headerlink" title="正则表达式有两种基本字符类型组成"></a>正则表达式有两种基本字符类型组成</h3><h4 id="1-原义文本字符"><a href="#1-原义文本字符" class="headerlink" title="1. 原义文本字符"></a>1. 原义文本字符</h4><h4 id="2-元字符"><a href="#2-元字符" class="headerlink" title="2. 元字符"></a>2. 元字符</h4><ul>
-<li>\t:水平制表符；</li>
-<li>\v:垂直制表符；</li>
-<li>\n:换行符；</li>
-<li>\r:回车符；</li>
-<li>\0:空字符；</li>
-<li>\f:换页符；</li>
-<li>\cX:与X对应的控制字符</li>
-<li>元字符在正则表达式中有特殊意义的非字母字符： *+?$^.(){}[]</li>
+</li>
+<li>除gulp之外还有一些类似的自动化工具，比如grunt</li>
+<li>what how why</li>
 </ul>
-<h3 id="范围类："><a href="#范围类：" class="headerlink" title="范围类："></a>范围类：</h3><ul>
-<li>[0-9]表示0到9的值</li>
-<li>[a-z]表示小写字母a到z</li>
-<li>[a-zA-Z]表示小写和大写字母a到z</li>
-<li>注意：a-z中间的-并不是代表字符哦 而是范围 </li>
-<li>如果要包括字符-的话，则加在后面，如[a-z-]</li>
+<h2 id="Gulp简介"><a href="#Gulp简介" class="headerlink" title="Gulp简介"></a>Gulp简介</h2><ul>
+<li>当下最流行的自动化工具<ul>
+<li>什么是自动化构建工具？</li>
+<li>自动完成一系列重复的操作<ul>
+<li>less → css</li>
+<li>coffeescript → js</li>
+<li>css压缩</li>
+<li>js混淆</li>
+<li>html压缩</li>
+<li>img尺寸优化</li>
+<li>。。。。</li>
 </ul>
-<h4 id="字符类取反"><a href="#字符类取反" class="headerlink" title="字符类取反 ^"></a>字符类取反 ^</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;a1b2c3d4&apos;.replace(/[^abc]/g,&apos;x&apos;)</div><div class="line">&apos;axbxcxxx&apos;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>链接：</p>
 <ul>
-<li>\D 等价于 [^0-9] 非数字字符</li>
-<li>\s 等价于 [\t\n\x0B\f\r] 空白符 s:space</li>
-<li>\S 等价于 [^\t\n\x0B\f\r] 非空白符</li>
-<li>\w 等价于 [a-zA-Z_0-9] 单词字符（字母、数字下划线） w:word</li>
-<li>\W 等价于 [^a-zA-Z_0-9] 非单词字符</li>
-<li>提示：大写的表示取反</li>
-<li>\b 单词边界</li>
-<li>\B非单词边界</li>
+<li><a href="http://gulpjs.com/" target="_blank" rel="external">官网</a></li>
+<li><a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">中文网</a></li>
 </ul>
-<h4 id="贪婪模式（默认）"><a href="#贪婪模式（默认）" class="headerlink" title="贪婪模式（默认）"></a>贪婪模式（默认）</h4><p>  \d{3,6}   1234568<br>  正则表达式在匹配时，尽可能多的匹配，直到匹配失败<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;1234568&apos;.replace(/\d&#123;3,6&#125;/g,&apos;Q&apos;);</div><div class="line">&quot;Q8&quot;</div><div class="line">&apos;1234568&apos;.replace(/\d&#123;3,6&#125;/,&apos;Q&apos;);</div><div class="line">&quot;Q8&quot;</div></pre></td></tr></table></figure></p>
-<h4 id="非贪婪模式"><a href="#非贪婪模式" class="headerlink" title="非贪婪模式"></a>非贪婪模式</h4><p>  正则表达式尽可能少的匹配，即一旦成功匹配就不再继续匹配<br>  做法：在量词后加上 ？ 即可<br>  例子：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;123456789&apos;.match(/\d&#123;3,5&#125;?/g)</div><div class="line">      [&quot;123&quot;, &quot;456&quot;, &quot;789&quot;]</div></pre></td></tr></table></figure></p>
-<h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><p>匹配字符串 Byron 连续出现 3 此的场景</p>
-<h4 id="1-使用（）可以达到分组的功能，使量词作用于分组-（Byron）-3-，如果直接Byron-3-则匹配到的三Byronnn"><a href="#1-使用（）可以达到分组的功能，使量词作用于分组-（Byron）-3-，如果直接Byron-3-则匹配到的三Byronnn" class="headerlink" title="1. 使用（）可以达到分组的功能，使量词作用于分组 （Byron）{3}，如果直接Byron{3}则匹配到的三Byronnn"></a>1. 使用（）可以达到分组的功能，使量词作用于分组 （Byron）{3}，如果直接Byron{3}则匹配到的三Byronnn</h4><p>例子：小写字母连续出现3次<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;a1b2c3d4&apos;.replace(/[a-z]\d&#123;3&#125;/g,&apos;Q&apos;);</div><div class="line">&quot;a1b2c3d4&quot;</div><div class="line">&apos;a1b2c3d4&apos;.replace(/([a-z]\d)&#123;3&#125;/g,&apos;Q&apos;);</div><div class="line">&quot;Qd4&quot;</div></pre></td></tr></table></figure></p>
-<h4 id="2-使用-将正则表达式分成前后两部分，可以达到-或-的效果"><a href="#2-使用-将正则表达式分成前后两部分，可以达到-或-的效果" class="headerlink" title="2. 使用 将正则表达式分成前后两部分，可以达到 或 的效果"></a>2. 使用 将正则表达式分成前后两部分，可以达到 或 的效果</h4><p>isIS ByronCasper Byr(on|Ca)sper<br>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&apos;ByronCasper&apos;.replace(/ByronCasper/g,&apos;Q&apos;);</div><div class="line">&quot;QQ&quot;</div><div class="line">&apos;ByrCasperByronsper&apos;.replace(/Byr(on|Ca)sper/g,&apos;Q&apos;);</div><div class="line">&quot;QQ&quot;</div></pre></td></tr></table></figure></p>
-<h4 id="3-反向引用"><a href="#3-反向引用" class="headerlink" title="3. 反向引用"></a>3. 反向引用</h4><p>2015-12-25 =&gt; 12/25/2015<br>在分组的基础上，分组取值使用’$1 $2….’代表捕获分组内容<br>实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;2015-09-09&apos;.replace(/(\d&#123;4&#125;)-(\d&#123;2&#125;)-(\d&#123;2&#125;)/g,&apos;$2/$3/$1&apos;);</div><div class="line">&quot;09/09/2015&quot;</div></pre></td></tr></table></figure></p>
-<h4 id="4-忽略分组"><a href="#4-忽略分组" class="headerlink" title="4. 忽略分组"></a>4. 忽略分组</h4><p>不希望捕获某些分组，只需要在分组内加上 ？：即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（？：Byron）.（ok）</div><div class="line">&apos;2015-07-09&apos;.replace(/(?:\d&#123;4&#125;)-(\d&#123;2&#125;)-(\d&#123;2&#125;)/g,&apos;$2/$3/$1&apos;);</div><div class="line">&quot;09/$3/07&quot;</div></pre></td></tr></table></figure></p>
-<h3 id="前瞻"><a href="#前瞻" class="headerlink" title="前瞻"></a>前瞻</h3><ul>
-<li>正则表达式从文本头部向尾部开始解析，文本尾部方向，成为“前”</li>
-<li>前瞻 就是在正则表达式匹配到规则的时候，向前检查是否符合断言。比如找到儿子为张三，还得看看他的父亲是否是李四</li>
-<li>后顾/后瞻方向相反</li>
-<li>注意：JavaScript不支持后顾</li>
-<li>符合特定断言称为 肯定/正向 匹配</li>
-<li>不符合特定断言称为 否定/负向 匹配</li>
-<li>正向前瞻 exp（？=assert） 先判断是否符合正则，再符合正则的基础上判断是否符合断言</li>
-<li>负向前瞻 exp（？！asseret）</li>
+</li>
+<li><p>gulp的包既包含工具，也包含一些编程的API</p>
+</li>
 </ul>
-<p>例如：<br>  \w(?=\d)  正向前瞻 符合断言 匹配单词字符，要求首先是一个单词，并且这个单词符合断言，后跟一个数字<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;a2*3&apos;.replace(/\w(?=\d)/g,&apos;A&apos;)   &quot;A2*3&quot;</div><div class="line">&apos;a2*3bb&apos;.replace(/\w(?!\d)/g,&apos;A&apos;)   &quot;aA*AAA&quot;</div></pre></td></tr></table></figure></p>
-<h4 id="对象属性"><a href="#对象属性" class="headerlink" title="对象属性"></a>对象属性</h4><ul>
-<li>global：是否全文搜索，默认false</li>
-<li>ignore case：是否大小写敏感，默认是false</li>
-<li>multiline：多行搜索，默认值是false</li>
-<li>lastIndex：是当前表达式匹配内容的最后一个字符的下一个位置</li>
-<li>source：正则表达式的文本字符串</li>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>安装Node.js<ul>
+<li>Node.js 给前端带来了一场工业革命</li>
+<li><a href="http://npm.taobao.org/" target="_blank" rel="external">http://npm.taobao.org/</a></li>
+<li>安装完成过后可以通过命令行工具node -v</li>
+<li>安装nodejs过程会自动安装npm(node packages manager)</li>
+<li>npm 3 以前的版本文件依赖是层级依赖</li>
+<li>npm 3 以后依赖关系改为平行依赖（windows上路径过长问题）</li>
+<li>gulp本身是node的模块</li>
+</ul>
+</li>
+<li>安装 gulp 命令行工具<ul>
+<li><code>npm install -g gulp</code></li>
+<li>-g 指的是在全局作用域中安装</li>
+<li>测试命令 gulp -v</li>
+</ul>
+</li>
+<li>初始化 gulp 项目<ul>
+<li>在本地安装gulp包</li>
+<li>npm install gulp –save</li>
+</ul>
+</li>
+<li>创建任务 - gulpfile.js<ul>
+<li>gulpfile.js 就是gulp的主文件</li>
+</ul>
+</li>
+</ul>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ul>
+<li>定义一个任务</li>
+<li>复制单个文件</li>
+<li>复制多个文件</li>
+<li><a href="https://github.com/isaacs/node-glob" target="_blank" rel="external">globs匹配语法</a><ul>
+<li>src/*</li>
+<li>src/*/*</li>
+<li>src/**/*</li>
+<li>src/*.jpg</li>
+<li>src/*.{jpg,png}</li>
+<li>多个globs<ul>
+<li>[‘src/*.{jpg,png}’,’a/a.html’]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>排除某些文件<ul>
+<li>!xxxxx</li>
+</ul>
+</li>
+<li>默认任务<ul>
+<li>gulp 中的任务名有个特殊值 default</li>
+</ul>
+</li>
+<li>文件监视自动执行任务</li>
+</ul>
+<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><ul>
+<li><a href="https://www.npmjs.com/package/gulp-less" target="_blank" rel="external">编译 Less：gulp-less</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-jade" target="_blank" rel="external">编译 Jade: gulp-jade</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-connect" target="_blank" rel="external">创建本地服务器：gulp-connect</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-concat" target="_blank" rel="external">合并文件：gulp-concat</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-uglify" target="_blank" rel="external">最小化 js 文件：gulp-uglify</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-rename" target="_blank" rel="external">重命名文件：gulp-rename</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-minify-css" target="_blank" rel="external">最小化 css 文件：gulp-minify-css</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-minify-html" target="_blank" rel="external">压缩html文件 gulp-minify-html</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-imagemin" target="_blank" rel="external">最小化图像：gulp-imagemin</a><h2 id="示例模板"><a href="#示例模板" class="headerlink" title="示例模板"></a>示例模板</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 此处代码都是由NODE执行</span></div><div class="line"><span class="comment">// 载入Gulp模块</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">var</span> less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 注册一个任务</span></div><div class="line">gulp.task(<span class="string">'copy'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 当gulp执行这个say任务时会自动执行该函数</span></div><div class="line">  <span class="comment">// console.log('hello world');</span></div><div class="line">  <span class="comment">// 合并 压缩之类的操作</span></div><div class="line">  <span class="comment">// 复制文件</span></div><div class="line">  <span class="comment">// gulo.src取一个文件</span></div><div class="line">  gulp.src(<span class="string">'src/index.html'</span>)</div><div class="line">    .pipe(gulp.dest(<span class="string">'dist/'</span>)); <span class="comment">// 将此处需要的操作传递进去</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line">gulp.task(<span class="string">'dist'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// src/index.html</span></div><div class="line">  gulp.watch(<span class="string">'src/index.html'</span>, [<span class="string">'copy'</span>]);</div><div class="line">  gulp.watch(<span class="string">'src/styles/*.less'</span>, [<span class="string">'style'</span>]);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> cssnano = <span class="built_in">require</span>(<span class="string">'gulp-cssnano'</span>);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'style'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  gulp.src(<span class="string">'src/styles/*.less'</span>)</div><div class="line">    .pipe(less()) <span class="comment">// 该环节过后就是CSS</span></div><div class="line">    .pipe(cssnano())</div><div class="line">    .pipe(gulp.dest(<span class="string">'dist/css/'</span>));</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> browserSync = <span class="built_in">require</span>(<span class="string">'browser-sync'</span>).create();</div><div class="line"></div><div class="line"><span class="comment">// Static server</span></div><div class="line">gulp.task(<span class="string">'serve'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    browserSync.init(&#123;</div><div class="line">        <span class="attr">server</span>: &#123;</div><div class="line">            <span class="attr">baseDir</span>: <span class="string">"./"</span></div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -386,13 +432,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/10/26/正则表达式/">正则表达式</a></p>
+        <p><span>本文标题:</span><a href="/2016/10/16/test-world/">gulp</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Lighting</a></p>
-        <p><span>发布时间:</span>2016-10-26, 09:50:31</p>
-        <p><span>最后更新:</span>2016-10-26, 15:34:57</p>
+        <p><span>发布时间:</span>2016-10-16, 20:50:51</p>
+        <p><span>最后更新:</span>2016-10-26, 20:56:44</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/10/26/正则表达式/" title="正则表达式">http://yoursite.com/2016/10/26/正则表达式/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/26/正则表达式/　　作者: Lighting" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/16/test-world/" title="gulp">http://yoursite.com/2016/10/16/test-world/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/16/test-world/　　作者: Lighting" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -404,12 +450,12 @@
 
     <nav id="article-nav">
         
-        
-            <div id="article-nav-older" class="article-nav-title">
+            <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2016/10/17/test2/">
                     npm与bower
                 </a>
             </div>
+        
         
     </nav>
 
@@ -419,7 +465,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式有两种基本字符类型组成"><span class="toc-number">1.</span> <span class="toc-text">正则表达式有两种基本字符类型组成</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-原义文本字符"><span class="toc-number">1.1.</span> <span class="toc-text">1. 原义文本字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-元字符"><span class="toc-number">1.2.</span> <span class="toc-text">2. 元字符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#范围类："><span class="toc-number">2.</span> <span class="toc-text">范围类：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字符类取反"><span class="toc-number">2.1.</span> <span class="toc-text">字符类取反 ^</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#贪婪模式（默认）"><span class="toc-number">2.2.</span> <span class="toc-text">贪婪模式（默认）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#非贪婪模式"><span class="toc-number">2.3.</span> <span class="toc-text">非贪婪模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分组"><span class="toc-number">3.</span> <span class="toc-text">分组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-使用（）可以达到分组的功能，使量词作用于分组-（Byron）-3-，如果直接Byron-3-则匹配到的三Byronnn"><span class="toc-number">3.1.</span> <span class="toc-text">1. 使用（）可以达到分组的功能，使量词作用于分组 （Byron）{3}，如果直接Byron{3}则匹配到的三Byronnn</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-使用-将正则表达式分成前后两部分，可以达到-或-的效果"><span class="toc-number">3.2.</span> <span class="toc-text">2. 使用 将正则表达式分成前后两部分，可以达到 或 的效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-反向引用"><span class="toc-number">3.3.</span> <span class="toc-text">3. 反向引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-忽略分组"><span class="toc-number">3.4.</span> <span class="toc-text">4. 忽略分组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前瞻"><span class="toc-number">4.</span> <span class="toc-text">前瞻</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#对象属性"><span class="toc-number">4.1.</span> <span class="toc-text">对象属性</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Gulp"><span class="toc-number">1.</span> <span class="toc-text">Gulp</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#当下的前端开发"><span class="toc-number">1.1.</span> <span class="toc-text">当下的前端开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gulp简介"><span class="toc-number">1.2.</span> <span class="toc-text">Gulp简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">1.3.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本使用"><span class="toc-number">1.4.</span> <span class="toc-text">基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用插件"><span class="toc-number">1.5.</span> <span class="toc-text">常用插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例模板"><span class="toc-number">1.6.</span> <span class="toc-text">示例模板</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -455,7 +501,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"正则表达式　| 雷庭的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"gulp　| 雷庭的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -471,7 +517,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/10/26/正则表达式/" data-title="正则表达式" data-url="http://yoursite.com/2016/10/26/正则表达式/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/10/16/test-world/" data-title="gulp" data-url="http://yoursite.com/2016/10/16/test-world/"></div>
     <script>
         var duoshuoQuery = {short_name:"weblight"};
         var loadComment = function(){
@@ -494,15 +540,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/10/17/test2/" title="上一篇: npm与bower">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/10/17/test2/" title="下一篇: npm与bower">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 

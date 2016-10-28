@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Lighting" />
+
+
+
+<meta name="description" content="响应式网站轮播图自适应问题解决方案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="响应式网站轮播图自适应相关问题总结">
+<meta property="og:url" content="http://yoursite.com/2016/10/28/响应式网站轮播图自适应相关问题总结/index.html">
+<meta property="og:site_name" content="雷庭的博客">
+<meta property="og:description" content="响应式网站轮播图自适应问题解决方案">
+<meta property="og:updated_time" content="2016-10-28T12:29:50.145Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="响应式网站轮播图自适应相关问题总结">
+<meta name="twitter:description" content="响应式网站轮播图自适应问题解决方案">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="雷庭的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/lightning_128px_1202595_easyicon.net.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>响应式网站轮播图自适应相关问题总结 | 雷庭的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?27c3cd3294091e2e0f24f3218b9a91cd";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/lt02.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Lighting</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">坚持 耐心</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:&#54;&#51;&#49;&#54;&#52;&#57;&#52;&#57;&#48;&#64;&#113;&#113;&#46;&#99;&#111;&#109;" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/lighting233" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 微信" href="/kiralight" title="微信"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/语法/">语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/轮播图/">轮播图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/项目/">项目</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">求实创新，立志图强</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Lighting</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/lt02.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Lighting</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">坚持 耐心</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:&#54;&#51;&#49;&#54;&#52;&#57;&#52;&#57;&#48;&#64;&#113;&#113;&#46;&#99;&#111;&#109;" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/lighting233" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 微信" target="_blank" href="/kiralight" title="微信"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-响应式网站轮播图自适应相关问题总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/28/响应式网站轮播图自适应相关问题总结/" class="article-date">
+      <time datetime="2016-10-28T12:23:52.000Z" itemprop="datePublished">2016-10-28</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      响应式网站轮播图自适应相关问题总结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/bootstrap/">bootstrap</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/轮播图/">轮播图</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="轮播图"><a href="#轮播图" class="headerlink" title="轮播图"></a>轮播图</h2><h3 id="Bootstrap-JS插件使用"><a href="#Bootstrap-JS插件使用" class="headerlink" title="Bootstrap JS插件使用"></a>Bootstrap JS插件使用</h3><blockquote>
+<p>对于Bootstrap的JS插件，我们只需要将文档实例中的代码粘到我们自己的代码中<br>让后作出相应的样式调整</p>
+</blockquote>
+<h4 id="Bootstrap中轮播图插件叫作Carousel"><a href="#Bootstrap中轮播图插件叫作Carousel" class="headerlink" title="Bootstrap中轮播图插件叫作Carousel"></a>Bootstrap中轮播图插件叫作Carousel</h4><h4 id="基本的轮播图实现"><a href="#基本的轮播图实现" class="headerlink" title="基本的轮播图实现"></a>基本的轮播图实现</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- </span></div><div class="line">  以下容器就是整个轮播图组件的整体，</div><div class="line">  注意该盒子必须加上 class="carousel slide" data-ride="carousel" 表示当前是一个轮播图</div><div class="line">  bootstrap.js会自动为当前元素添加图片轮播的特效</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"轮播图的ID"</span> <span class="attr">class</span>=<span class="string">"carousel slide"</span> <span class="attr">data-ride</span>=<span class="string">"carousel"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- ol标签是图片轮播的控制点 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"carousel-indicators"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- </span></div><div class="line">      每一个li就是一个单独的控制点</div><div class="line">        data-target属性就是指定当前控制点控制的是哪一个轮播图，其目的是如果界面上有多个轮播图，便于区分到底控制哪一个</div><div class="line">        data-slide-to属性是指当前的li元素绑定的是第几个轮播项</div><div class="line">      注意，默认必须给其中某个li加上active，展示的时候就是焦点项目</div><div class="line">    --&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-target</span>=<span class="string">"#轮播图的ID"</span> <span class="attr">data-slide-to</span>=<span class="string">"0"</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-target</span>=<span class="string">"#轮播图的ID"</span> <span class="attr">data-slide-to</span>=<span class="string">"1"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- ...更多的 --&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- </span></div><div class="line">    .carousel-inner是所有轮播项的容器盒子，</div><div class="line">    注意role="listbox"代表当前div是一个列表盒子，作用就是给当前div添加一个语义</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-inner"</span> <span class="attr">role</span>=<span class="string">"listbox"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 每一个.item就是单个轮播项目，注意默认要给第一个轮播项目加上active，表示为焦点 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item active"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- 轮播项目中展示的图片 --&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"example.jpg"</span> <span class="attr">alt</span>=<span class="string">"示例图片"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-caption"</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 标题或说明性文字，如果不需要，直接删除当前div.carousel-caption --&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- ... --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- ... --&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 图片轮播上左右两个控制按钮，分别点击可以滚动到上一张和下一张 --&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 此处需要注意的是 该a链接的href属性必须指向需要控制的轮播图ID --&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 另外a链接中的data-slide="prev"代表点击该链接会滚到上一张，如果设置为next的话则相反 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"left carousel-control"</span> <span class="attr">href</span>=<span class="string">"#轮播图的ID"</span> <span class="attr">role</span>=<span class="string">"button"</span> <span class="attr">data-slide</span>=<span class="string">"prev"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"glyphicon glyphicon-chevron-left"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>&gt;</span>上一张<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"right carousel-control"</span> <span class="attr">href</span>=<span class="string">"#轮播图的ID"</span> <span class="attr">role</span>=<span class="string">"button"</span> <span class="attr">data-slide</span>=<span class="string">"next"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"glyphicon glyphicon-chevron-right"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>&gt;</span>下一张<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="由于轮播图片超宽造成的影响"><a href="#由于轮播图片超宽造成的影响" class="headerlink" title="由于轮播图片超宽造成的影响"></a>由于轮播图片超宽造成的影响</h4><ul>
+<li>美工为了在不同屏幕下更好地展示将图片两边做的非常宽，但是我们大多数情况的页面宽度都无法满足这样的图片宽度</li>
+<li>而且Bootstrap的样式中默认将图片的max-width设置为100%；</li>
+<li>造成界面图片缩放</li>
+<li>想在一个较小屏幕下展示一个超宽的图片，并让图片居中显示<ul>
+<li>两种办法：<ul>
+<li>换用背景图的方式，background-position: center center;</li>
+<li>使img元素绝对定位，left:50%，margin-left: -width/2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="background使用"><a href="#background使用" class="headerlink" title="background使用"></a>background使用</h3><ul>
+<li>将容器的高度固定（410px）</li>
+<li>将轮播图改为背景显示</li>
+<li>由于可能图片的高度不一定是410px</li>
+<li>所以需要设置css3中的background-size</li>
+</ul>
+<h4 id="background-size"><a href="#background-size" class="headerlink" title="background-size"></a>background-size</h4><ul>
+<li>length<ul>
+<li>如 background-size: 100px 100px，将背景图固定到多大尺寸</li>
+</ul>
+</li>
+<li>percentage<ul>
+<li>如 background-size: 90% 90%，以百分比的形式设置背景大小</li>
+</ul>
+</li>
+<li>cover<ul>
+<li>1.背景图片等比例缩放</li>
+<li>2.让背景图相对较小边放大到目标容器大小结束<ul>
+<li>如：一张100*200的背景图放到一个300*400的盒子中，最终背景图片的大小是300*600</li>
+<li>因为背景图的较小边为100，将100放大到目标容器300的宽度，放大了3倍，最终结果300*600</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>contain<ul>
+<li>1.背景图片等比例缩放</li>
+<li>2.让背景图相对较大边放大到目标容器大小结束<ul>
+<li>如：一张100*200的背景图放到一个300*400的盒子中，最终背景图片的大小是200*400</li>
+<li>因为背景图的较大边为200，将200放大到目标容器400的高度，放大了2倍，最终结果200*400</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h5><h6 id="cover"><a href="#cover" class="headerlink" title="cover"></a>cover</h6><div style="width: 400px;height: 200px;border:1px dashed #c0c0c0;background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxOWU5ZmNjZDAgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE5ZTlmY2NkMCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS4xIj4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+');background-repeat:no-repeat;background-size: cover;"></div>
+
+<h6 id="contain"><a href="#contain" class="headerlink" title="contain"></a>contain</h6><div style="width: 400px;height: 200px;border:1px dashed #c0c0c0;background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxOWU5ZmNjZDAgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE5ZTlmY2NkMCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS4xIj4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+');background-repeat:no-repeat;background-size: contain;"></div>
+
+<h3 id="图片响应式"><a href="#图片响应式" class="headerlink" title="图片响应式"></a>图片响应式</h3><ul>
+<li>目的<ul>
+<li>各种终端都需要正常显示图片</li>
+<li>移动端应该使用更小（体积）的图片</li>
+</ul>
+</li>
+<li>实现方式<ul>
+<li>将元素中直接设置的图片背景删除，换成两个data-属性（如：data-img-sm=”小图路径”，data-img-lg=”大图路径”）</li>
+<li>通过JS的方式获取屏幕的宽度；</li>
+<li>判断屏幕宽度是否小于一定的值（如：768）</li>
+<li>根据判断情况决定使用具体的大图还是小图</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取屏幕宽度</span></div><div class="line"><span class="keyword">var</span> windowWidth = $(<span class="built_in">window</span>).width();</div><div class="line"><span class="comment">// 判断屏幕属于大还是小</span></div><div class="line"><span class="keyword">var</span> isSmallScreen = windowWidth &lt; <span class="number">768</span>;</div><div class="line"><span class="comment">// 根据大小为界面上的每一张轮播图设置背景</span></div><div class="line"><span class="comment">// $('#main_ad &gt; .carousel-inner &gt; .item') // 获取到的是一个DOM数组（多个元素）</span></div><div class="line">$(<span class="string">'#main_ad &gt; .carousel-inner &gt; .item'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i, item</span>) </span>&#123;</div><div class="line">  <span class="comment">// 因为拿到是DOM对象 需要转换</span></div><div class="line">  <span class="keyword">var</span> $item = $(item);</div><div class="line">  <span class="comment">// var imgSrc = $item.data(isSmallScreen ? 'image-xs' : 'image-lg');</span></div><div class="line">  <span class="keyword">var</span> imgSrc =</div><div class="line">    isSmallScreen ? $item.data(<span class="string">'image-xs'</span>) : $item.data(<span class="string">'image-lg'</span>);</div><div class="line"></div><div class="line">  <span class="comment">// 设置背景图片</span></div><div class="line">  $item.css(<span class="string">'backgroundImage'</span>, <span class="string">'url("'</span> + imgSrc + <span class="string">'")'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="window-resize事件"><a href="#window-resize事件" class="headerlink" title="window resize事件"></a>window resize事件</h3><ul>
+<li>由于上一步我们实现的过程是指在页面加载完成判断一次，</li>
+<li>当用户手动调整页面宽度过后没有及时发生变化，</li>
+<li>所以我们可以通过window的resize事件中重新完成以上操作来解决这个问题</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> 窗口变化后执行的函数名(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">// 具体的操作</span></div><div class="line">&#125;</div><div class="line">$(<span class="built_in">window</span>).on(<span class="string">'resize'</span>, 窗口变化后执行的函数名);</div></pre></td></tr></table></figure>
+<ul>
+<li>这个事件只会在窗口尺寸发生变化后执行，但是我们需要一开始时执行一次</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">$(<span class="built_in">window</span>).on(<span class="string">'resize'</span>, 窗口变化后执行的函数名).trigger(<span class="string">'resize'</span>);</div></pre></td></tr></table></figure>
+<h3 id="小图片不需要使用背景的方式"><a href="#小图片不需要使用背景的方式" class="headerlink" title="小图片不需要使用背景的方式"></a>小图片不需要使用背景的方式</h3><ul>
+<li>小图如果还是使用背景的方式，当屏幕特别小时，效果很差</li>
+<li>所以当使用小图时，改用img的方式</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 因为我们需要小图时 尺寸等比例变化，所以小图时我们使用img方式</span></div><div class="line"><span class="keyword">if</span> (isSmallScreen) &#123;</div><div class="line">  $item.html(<span class="string">'&lt;img src="'</span> + imgSrc + <span class="string">'" alt="" /&gt;'</span>);</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  $item.empty();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>按照目前的情况，如果是小图展示则不需要给容器加上410px的固定高度</li>
+<li>所以我们可以通过CSS媒体查询的方式解决</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#main_ad</span> &gt; <span class="selector-class">.carousel-inner</span> &gt; <span class="selector-class">.item</span> &#123;</div><div class="line">  <span class="attribute">background-repeat</span>: no-repeat;</div><div class="line">  <span class="attribute">background-position</span>: center center;</div><div class="line">  <span class="attribute">background-size</span>: cover;</div><div class="line">&#125;</div><div class="line">@<span class="keyword">media</span> (min-width: <span class="number">768px</span>) &#123;</div><div class="line">  <span class="selector-id">#main_ad</span> &gt; <span class="selector-class">.carousel-inner</span> &gt; <span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">410px</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#main_ad</span> &gt; <span class="selector-class">.carousel-inner</span> &gt; <span class="selector-class">.item</span> &gt; <span class="selector-tag">img</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/10/28/响应式网站轮播图自适应相关问题总结/">响应式网站轮播图自适应相关问题总结</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Lighting</a></p>
+        <p><span>发布时间:</span>2016-10-28, 20:23:52</p>
+        <p><span>最后更新:</span>2016-10-28, 20:29:50</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/10/28/响应式网站轮播图自适应相关问题总结/" title="响应式网站轮播图自适应相关问题总结">http://yoursite.com/2016/10/28/响应式网站轮播图自适应相关问题总结/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/28/响应式网站轮播图自适应相关问题总结/　　作者: Lighting" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/10/27/bootstrap总结/">
+                    bootstrap总结
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#轮播图"><span class="toc-number">1.</span> <span class="toc-text">轮播图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bootstrap-JS插件使用"><span class="toc-number">1.1.</span> <span class="toc-text">Bootstrap JS插件使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Bootstrap中轮播图插件叫作Carousel"><span class="toc-number">1.1.1.</span> <span class="toc-text">Bootstrap中轮播图插件叫作Carousel</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本的轮播图实现"><span class="toc-number">1.1.2.</span> <span class="toc-text">基本的轮播图实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#由于轮播图片超宽造成的影响"><span class="toc-number">1.1.3.</span> <span class="toc-text">由于轮播图片超宽造成的影响</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#background使用"><span class="toc-number">1.2.</span> <span class="toc-text">background使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#background-size"><span class="toc-number">1.2.1.</span> <span class="toc-text">background-size</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#demo"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">demo</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#cover"><span class="toc-number">1.2.1.1.1.</span> <span class="toc-text">cover</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#contain"><span class="toc-number">1.2.1.1.2.</span> <span class="toc-text">contain</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图片响应式"><span class="toc-number">1.3.</span> <span class="toc-text">图片响应式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#window-resize事件"><span class="toc-number">1.4.</span> <span class="toc-text">window resize事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小图片不需要使用背景的方式"><span class="toc-number">1.5.</span> <span class="toc-text">小图片不需要使用背景的方式</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"响应式网站轮播图自适应相关问题总结　| 雷庭的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/10/28/响应式网站轮播图自适应相关问题总结/" data-title="响应式网站轮播图自适应相关问题总结" data-url="http://yoursite.com/2016/10/28/响应式网站轮播图自适应相关问题总结/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"weblight"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/10/27/bootstrap总结/" title="下一篇: bootstrap总结">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/响应式网站轮播图自适应相关问题总结/">响应式网站轮播图自适应相关问题总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/27/bootstrap总结/">bootstrap总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/26/project/">个人项目展示</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/26/正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/test2/">npm与bower</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/test-world/">gulp</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 Lighting
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 6;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

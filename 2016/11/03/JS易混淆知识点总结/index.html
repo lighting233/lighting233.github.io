@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="npm基本用法">
+<meta name="description" content="持续更新">
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm与bower">
-<meta property="og:url" content="http://yoursite.com/2016/10/17/test2/index.html">
+<meta property="og:title" content="JS易混淆知识点总结">
+<meta property="og:url" content="http://yoursite.com/2016/11/03/JS易混淆知识点总结/index.html">
 <meta property="og:site_name" content="雷庭的博客">
-<meta property="og:description" content="npm基本用法">
-<meta property="og:updated_time" content="2016-10-17T14:18:28.066Z">
+<meta property="og:description" content="持续更新">
+<meta property="og:updated_time" content="2016-11-03T07:03:24.533Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="npm与bower">
-<meta name="twitter:description" content="npm基本用法">
+<meta name="twitter:title" content="JS易混淆知识点总结">
+<meta name="twitter:description" content="持续更新">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>npm与bower | 雷庭的博客</title>
+<title>JS易混淆知识点总结 | 雷庭的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -276,11 +276,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-test2" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JS易混淆知识点总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/17/test2/" class="article-date">
-      <time datetime="2016-10-17T14:18:28.062Z" itemprop="datePublished">2016-10-17</time>
+      <a href="/2016/11/03/JS易混淆知识点总结/" class="article-date">
+      <time datetime="2016-11-03T03:04:39.000Z" itemprop="datePublished">2016-11-03</time>
 </a>
 
 
@@ -295,7 +295,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      npm与bower
+      JS易混淆知识点总结
     </h1>
   
 
@@ -304,13 +304,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+    <a class="article-category-link" href="/categories/备忘录/">备忘录</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -320,34 +320,26 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
-<h1 id="NPM"><a href="#NPM" class="headerlink" title=" NPM"></a> NPM</h1><ul>
-<li>node package manager(node的包管理工具)</li>
-<li>npm管理包非常方便，我们只需要记住使用哪个包就可以了</li>
-<li><p>使用</p>
+        <h3 id="apply与call"><a href="#apply与call" class="headerlink" title="apply与call"></a>apply与call</h3><p>参数不同<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">myFunc.call(obj,arg1,arg2);</div><div class="line">myFunc.apply(obj,[arg1,arg2..]);</div></pre></td></tr></table></figure></p>
 <ul>
-<li>npm install xxx</li>
-<li>安装一个包到项目本地，必须要联网</li>
-<li>安装完成过后项目根目录下会多一个node_modules文件夹，所有的下载下来的包全部在里面</li>
-<li>由于需要记录项目依赖哪些东西，所以需要一个配置文件“package.json”，可以通过npm init命令生成</li>
-<li>以后安装包的时候将其–save</li>
-<li>–save就是将我们安装的包名字和包版本记录到配置文件中的dependencies节点中</li>
-<li>–save-dev</li>
-<li>项目依赖分两种，一个就是普通的项目依赖比如bootstrap，还用一种只是开发阶段需要用的，这种属于开发依赖比如gulp，开发依赖最终记录在devDependencies节点里面<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- npm uninstall xxx --save</div><div class="line">- npm install xxx -g(全局安装包)</div></pre></td></tr></table></figure>
+<li>call的小作用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">toString.call(null);</div><div class="line">//判断数据类型</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<ul>
-<li>如果你安装的是一个工具，工具要在每一个地方都能用，这种情况下一般全局安装。</li>
-</ul>
-</li>
-</ul>
-<h1 id="Bower"><a href="#Bower" class="headerlink" title="Bower"></a>Bower</h1><ul>
-<li>Web sites are made of lots of things ― frameworks, libraries, assets, and utilities. Bower manages all these things for you.</li>
-<li>Bower就是用来管理项目中所有的依赖，主要用于Web页面开发时使用的包管理，比如jquery，bootstrap<blockquote>
-<p>重复的轮子太多，抓住轮子与轮子之间的共性</p>
-</blockquote>
-</li>
-</ul>
+<h3 id="caller与callee"><a href="#caller与callee" class="headerlink" title="caller与callee"></a>caller与callee</h3><p><strong>caller</strong> 返回函数调用者<br>caller的应用场景 主要用于察看函数本身被哪个函数调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> function fn() &#123;</div><div class="line">// 判断某函数是否被调用</div><div class="line">      if (fn.caller) &#123;</div><div class="line">          alert(fn.caller.toString());</div><div class="line">      &#125; else &#123;</div><div class="line">          alert(&quot;函数直接执行&quot;);</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line"></div><div class="line">  function AAAA() &#123;</div><div class="line">      fn();</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  AAAA();</div></pre></td></tr></table></figure></p>
+<p><strong>callee</strong> 返回正被执行的 Function 对象，也就是所指定的 Function 对象的正文.<br>callee是arguments 的一个属性成员，它表示对函数对象本身的引用<br>arguments.callee.length可以获取实参参数</p>
+<p>callee用处1 用来判断实际参数跟行参是否一致<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function calleeLengthDemo(arg1, arg2) &#123;</div><div class="line">//    callee表示当前正在执行的函数对象，其实是函数的一个实例化</div><div class="line">    alert(arguments.callee.toString());</div><div class="line">    if (arguments.length == arguments.callee.length) &#123;</div><div class="line">        window.alert(&quot;验证形参和实参长度正确！&quot;);</div><div class="line">        return;</div><div class="line">    &#125; else &#123;</div><div class="line">        alert(&quot;实参长度：&quot; + arguments.length);</div><div class="line">        alert(&quot;形参长度： &quot; + arguments.callee.length);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//当函数被执行的时候，生成一个实例</div><div class="line">calleeLengthDemo(1);</div></pre></td></tr></table></figure></p>
+<p>callee用处2 调用自身 - 比如递归函数<br>计算 1+2+3+4+…+n</p>
+<p>传统方式的缺点:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 1,破坏了零重复法则,当一旦函数名称更改,需要更改多处</div><div class="line">// 2,fn是一个全局变量,fn内部一般使用局部变量,而这里是一个全局变量,这是一个潜在的全局变量污染</div><div class="line">var fn=function(n)&#123;</div><div class="line">    if(n&gt;0) return n+fn(n-1);</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line">alert(&apos;采用传统方式&apos;+fn(10))</div></pre></td></tr></table></figure></p>
+<p>cellee优点:这样就让代码更加简练。又防止了全局变量的污染<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var fn=(function(n)&#123;</div><div class="line">    if(n&gt;0) return n+arguments.callee(n-1);</div><div class="line">    return 0;</div><div class="line">&#125;)(10);</div><div class="line">alert(&apos;采用callee方式:&apos;+fn)</div></pre></td></tr></table></figure></p>
+<h3 id="String-对象方法"><a href="#String-对象方法" class="headerlink" title="String 对象方法"></a>String 对象方法</h3><p><strong>charAt()</strong> 方法可返回指定位置的字符。<br><strong>indexOf()</strong> 方法可返回某个指定的字符串值在字符串中首次出现的位置。</p>
+<p><strong>slice()</strong> 方法可提取字符串的某个部分，并以新的字符串返回被提取的部分。<br>返回值:一个新的字符串。包括字符串 stringObject 从 start 开始（包括 start）到 end 结束（不包括 end）为止的所有字符。</p>
+<p><strong>substring()</strong> 方法用于提取字符串中介于两个指定下标之间的字符。<br>返回值:一个新的字符串，该字符串值包含 stringObject 的一个子字符串，其内容是从 start 处到 stop-1 处的所有字符，其长度为 stop 减 start。</p>
+<p>说明<br>String 对象的方法 slice()、substring() 和 substr() （不建议使用）都可返回字符串的指定部分。slice() 比 substring() 要灵活一些，因为它允许使用负数作为参数。slice() 与 substr() 有所不同，因为它用两个字符的位置来指定子串，而 substr() 则用字符位置和长度来指定子串。<br>还要注意的是，String.slice() 与 Array.slice() 相似。</p>
+<p><strong>split()</strong> 方法用于把一个字符串分割成字符串数组。<br>返回值:一个字符串数组。</p>
+<h3 id="Array-对象方法"><a href="#Array-对象方法" class="headerlink" title="Array 对象方法"></a>Array 对象方法</h3><p><strong>slice()</strong> 方法可从已有的数组中返回选定的元素。<br>返回值:返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。</p>
+<p><strong>splice()</strong> 方法向/从数组中添加/删除项目，然后返回被删除的项目。<br>arrayObject.splice(index,howmany,item1,…..,itemX)<br>index:必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。<br>howmany:必需。要删除的项目数量。如果设置为 0，则不会删除项目。<br>item1, …, itemX:可选。向数组添加的新项目。<br>返回值:包含被删除项目的新数组，如果有的话。<br>请注意，splice() 方法与 slice() 方法的作用是不同的，splice() 方法会直接对数组进行修改。</p>
+<p><strong>toString()</strong> 方法可把数组转换为字符串，并返回结果。<br>返回值:arrayObject 的字符串表示。返回值与没有参数的 join() 方法返回的字符串相同。</p>
+<p><strong>join()</strong> 方法用于把数组中的所有元素放入一个字符串。元素是通过指定的分隔符进行分隔的。<br>返回值:返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的。</p>
 
       
     </div>
@@ -356,13 +348,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/10/17/test2/">npm与bower</a></p>
+        <p><span>本文标题:</span><a href="/2016/11/03/JS易混淆知识点总结/">JS易混淆知识点总结</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Lighting</a></p>
-        <p><span>发布时间:</span>2016-10-17, 22:18:28</p>
-        <p><span>最后更新:</span>2016-10-17, 22:18:28</p>
+        <p><span>发布时间:</span>2016-11-03, 11:04:39</p>
+        <p><span>最后更新:</span>2016-11-03, 15:03:24</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/10/17/test2/" title="npm与bower">http://yoursite.com/2016/10/17/test2/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/10/17/test2/　　作者: Lighting" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/11/03/JS易混淆知识点总结/" title="JS易混淆知识点总结">http://yoursite.com/2016/11/03/JS易混淆知识点总结/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/11/03/JS易混淆知识点总结/　　作者: Lighting" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -374,16 +366,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/10/26/正则表达式/">
-                    正则表达式
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/10/16/test-world/">
-                    gulp
+                <a href="/2016/10/29/常用正则表达式大全/">
+                    常用正则表达式大全
                 </a>
             </div>
         
@@ -395,7 +381,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#NPM"><span class="toc-number">1.</span> <span class="toc-text"> NPM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Bower"><span class="toc-number">2.</span> <span class="toc-text">Bower</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#apply与call"><span class="toc-number">1.</span> <span class="toc-text">apply与call</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#caller与callee"><span class="toc-number">2.</span> <span class="toc-text">caller与callee</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-对象方法"><span class="toc-number">3.</span> <span class="toc-text">String 对象方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Array-对象方法"><span class="toc-number">4.</span> <span class="toc-text">Array 对象方法</span></a></li></ol>
         
     </div>
     <style>
@@ -431,7 +417,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"npm与bower　| 雷庭的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"JS易混淆知识点总结　| 雷庭的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -447,7 +433,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/10/17/test2/" data-title="npm与bower" data-url="http://yoursite.com/2016/10/17/test2/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/11/03/JS易混淆知识点总结/" data-title="JS易混淆知识点总结" data-url="http://yoursite.com/2016/11/03/JS易混淆知识点总结/"></div>
     <script>
         var duoshuoQuery = {short_name:"weblight"};
         var loadComment = function(){
@@ -470,15 +456,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/10/26/正则表达式/" title="上一篇: 正则表达式">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/10/16/test-world/" title="下一篇: gulp">
+            <a href="/2016/10/29/常用正则表达式大全/" title="下一篇: 常用正则表达式大全">
                 <i class="fa fa-angle-right"></i>
             </a>
         
